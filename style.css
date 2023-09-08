@@ -46,7 +46,8 @@ body {
     right: 40px;
     bottom: 100px;
     
-    width: 420px;
+    width: 350px;
+    height: 500px;
     border-radius: 15px;
     transform: scale(0.5);
     overflow: hidden;
@@ -58,6 +59,11 @@ body {
     transform: scale(1);
     opacity: 1;
     pointer-events: auto;
+}
+
+.fullscreen .chatbot {
+    height: 600px;
+    width: 500px;
 }
 
 .chatbot header {
@@ -72,7 +78,7 @@ body {
     font-size: 1.4rem;
 }
 
-.chatbot header span {
+.chatbot header .close-btn {
     position: absolute;
     right: 20px;
     top: 50%;
@@ -81,8 +87,26 @@ body {
     transform: translateY(-50%);
 }
 
+.chatbot header .maximise-btn {
+    position: absolute;
+    right: 70px;
+    top: 50%;
+    color: #fff;
+    cursor: pointer;
+    transform: translateY(-50%);
+}
+
+.chatbot header .minimise-btn {
+    position: absolute;
+    right: 90px;
+    top: 50%;
+    color: #fff;
+    cursor: pointer;
+    transform: translateY(-50%);
+    opacity: 0;
+}
+
 .chatbot .chatbox {
-    height: 500px;
     overflow-y: scroll;
     padding: 15px 20px 70px;
 }

@@ -3,6 +3,8 @@ const sendBtn = document.querySelector(".chat-input span");
 const chatBox = document.querySelector(".chatbox");
 const chatBotToggler = document.querySelector(".chatbot-toggler");
 const closeBtn = document.querySelector(".close-btn");
+const maximiseBtn = document.querySelector(".maximise-btn");
+const minimiseBtn = document.querySelector(".minimise-btn");
 
 let message;
 
@@ -46,4 +48,16 @@ chatBotToggler.addEventListener("click", () => {
 
 closeBtn.addEventListener("click", () => {
     document.body.classList.remove("show-chatbot");
+});
+
+maximiseBtn.addEventListener("click", () => {
+    document.body.classList.add("fullscreen");
+    maximiseBtn.style.opacity = "0";
+    minimiseBtn.style.opacity = "1";
+});
+
+minimiseBtn.addEventListener("click", () => {
+    document.body.classList.remove("fullscreen");
+    minimiseBtn.style.opacity = "0";
+    maximiseBtn.style.opacity = "1";
 });
